@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أول موقع لي على GitHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            direction: rtl;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+        
+        .emoji {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .message {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #d0d0d0;
+        }
+        
+        .steps {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .step:hover {
+            transform: translateX(-10px);
+        }
+        
+        .step-number {
+            background: #667eea;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .step-text {
+            font-size: 1.1rem;
+        }
+        
+        .github-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #2193b0, #6dd5ed);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(33, 147, 176, 0.4);
+        }
+        
+        .github-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(33, 147, 176, 0.6);
+        }
+        
+        .counter {
+            font-size: 2rem;
+            margin: 20px 0;
+            color: #4cd137;
+            font-weight: bold;
+        }
+        
+        footer {
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🚀</div>
+        <h1>أهلاً وسهلاً في GitHub!</h1>
+        <h2>هذا أول موقع لي على المنصة</h2>
+        
+        <div class="message">
+            <p>مرحباً! أنا <strong>oade-sh</strong>، وهذا أول مشروع لي على GitHub.</p>
+            <p>اليوم بدأت رحلتي في تعلم البرمجة وتطوير الويب.</p>
+        </div>
+        
+        <div class="counter">📅 اليوم: 15 فبراير 2024</div>
+        
+        <div class="steps">
+            <h3>🎯 خطواتي القادمة:</h3>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-text">تعلم HTML و CSS بشكل متقدم</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-text">إتقان JavaScript</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-text">تعلم React.js</div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-text">بناء مشاريع حقيقية</div>
+            </div>
+        </div>
+        
+        <a href="https://github.com/oade-sh" class="github-link" target="_blank">
+            👀 تابع تقدمي على GitHub
+        </a>
+        
+        <footer>
+            <p>✨ "الرحلة تتطلب خطوة أولى، وهذه خطوتي الأولى"</p>
+            <p>⏰ تم الإنشاء اليوم - بداية الرحلة البرمجية</p>
+        </footer>
+    </div>
+    
+    <script>
+        // تحديث التاريخ تلقائياً
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const dateString = now.toLocaleDateString('ar-SA', options);
+        document.querySelector('.counter').textContent = `📅 اليوم: ${dateString}`;
+        
+        // تأثير عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.container').style.opacity = '0';
+            document.querySelector('.container').style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                document.querySelector('.container').style.transition = 'opacity 0.8s, transform 0.8s';
+                document.querySelector('.container').style.opacity = '1';
+                document.querySelector('.container').style.transform = 'translateY(0)';
+            }, 300);
+        });
+    </script>
+</body>
+</html>
